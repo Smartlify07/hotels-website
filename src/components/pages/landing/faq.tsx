@@ -1,5 +1,6 @@
 import { hotels } from '@/data/dummyData';
 import { useState } from 'react';
+import { motion } from 'motion/react';
 
 export function Faq() {
   const [openFaq, _] = useState(0);
@@ -31,7 +32,20 @@ export function Faq() {
     },
   ];
   return (
-    <section className="py-20 px-4 flex items-center justify-center">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="py-20 px-4 flex items-center justify-center"
+    >
       <div className="w-full flex flex-col gap-14">
         <div className="flex flex-col md:flex-row md:items-end gap-6 justify-between">
           <div className="flex flex-col flex-1/2 gap-4">
@@ -39,12 +53,41 @@ export function Faq() {
               FAQ
             </span>
             <div className="flex flex-col">
-              <h1 className="text-neutral-950 tracking-tighter text-3xl md:text-4xl lg:text-5xl">
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 5,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="text-neutral-950 tracking-tighter text-3xl md:text-4xl lg:text-5xl"
+              >
                 Got Questions?
-              </h1>
-              <h1 className="text-neutral-950 tracking-tighter text-3xl md:text-4xl lg:text-5xl">
+              </motion.h1>
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 0.5,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="text-neutral-950 tracking-tighter text-3xl md:text-4xl lg:text-5xl"
+              >
                 We've Got Answers!
-              </h1>
+              </motion.h1>
             </div>
           </div>
 
@@ -57,7 +100,18 @@ export function Faq() {
         <div className="flex flex-col md:flex-row md:gap-10 items-start">
           <div className="flex-1/2 grid gap-6">
             {faqs.map((item, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: (index + 1) * 0.2,
+                  delay: (index + 1) * 0.2,
+                }}
+                viewport={{
+                  once: true,
+                }}
                 key={index}
                 className="rounded-md border border-neutral-300 flex flex-col gap-1 py-3 px-2"
               >
@@ -68,18 +122,29 @@ export function Faq() {
                     {item.description}
                   </p>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
 
           <div className="hidden md:block md:flex-1/2">
-            <img
+            <motion.img
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
               src={hotels[4].image}
               className="rounded-md w-full object-cover h-[400px] "
             />
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
