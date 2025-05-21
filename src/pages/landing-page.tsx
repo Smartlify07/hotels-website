@@ -9,7 +9,7 @@ import { Waitlist } from '@/components/pages/landing/waitlist';
 export default function LandingPage() {
   return (
     <main className="">
-      <div className="hero-bg relative h-screen">
+      <div className="hero-bg relative h-svh md:h-screen">
         <div className="absolute inset-0 bg-black/50 z-0"></div>
         <div className="relative z-10">
           <Navbar />
