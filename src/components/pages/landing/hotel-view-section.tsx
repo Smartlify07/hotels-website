@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export function HotelViewSection() {
   return (
-    <section className="flex items-stretch gap-10 py-10 px-4">
+    <section className="flex flex-col md:flex-row items-stretch gap-10 md:py-10 px-4">
       <div className="flex-1/2">
         <div className="relative h-[450px]">
           <img
@@ -20,7 +20,7 @@ export function HotelViewSection() {
             <h1 className="text-white font-medium tracking-tighter text-4xl">
               {hotels[2].name}
             </h1>
-            <p className="text-white/80 w-8/12 tracking-tighter text-xs">
+            <p className="text-white/80 md:w-8/12 tracking-tighter text-sm md:text-xs">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Repudiandae quod dignissimos ducimus provident! Quos culpa eum
               magnam eos sequi ducimus?
@@ -33,19 +33,25 @@ export function HotelViewSection() {
           <div className="grid grid-cols-3 gap-4">
             <img
               className="rounded-lg object-cover col-span-1 w-full h-[170px]"
-              src={hotels[0].image}
+              src={
+                'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688115/photorealistic-wooden-house-interior-with-timber-decor-furnishings_h9i1ej.jpg'
+              }
             />
             <img
               className="rounded-lg object-cover col-span-1 w-full h-[170px]"
-              src={hotels[1].image}
+              src={
+                'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/3d-rendering-wooden-house_gs3jri.jpg'
+              }
             />
             <img
-              className="rounded-lg object-cover col-span-1 h-[170px]"
-              src={hotels[2].image}
+              className="rounded-lg object-cover col-span-1 w-full h-[170px]"
+              src={
+                'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/3d-rendering-wooden-house_1_ukbyz7.jpg'
+              }
             />
           </div>
 
-          <div className="flex flex-wrap w-6/12 gap-2">
+          <div className="flex flex-wrap lg:w-6/12 gap-2">
             <span className="px-4 w-fit text-sm text-neutral-800 tracking-tighter rounded-full border border-neutral-300 py-1">
               Beachfront
             </span>

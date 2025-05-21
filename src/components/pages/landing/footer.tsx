@@ -6,17 +6,18 @@ export function Footer() {
     { label: 'Facebook', link: '' },
   ];
   return (
-    <footer className="bg-neutral-950 mt-6 pt-8">
-      <div className=" flex gap-5 justify-between h-[400px] flex-col">
-        <div className="flex items-start justify-between px-4">
+    <footer className="bg-neutral-950 mt-6 py-8 md:pb-0 md:pt-8">
+      <div className="flex gap-5 justify-between h-[400px] flex-col">
+        <div className="flex flex-col gap-6 md:gap-0 md:flex-row md:items-start justify-between px-4">
           <div className="flex flex-col flex-1/2 gap-6">
             <h1 className="text-white text-4xl tracking-tighter">
               Serenity <sup>*</sup>
             </h1>
 
-            <div className="flex items-center gap-4">
-              {contactChannels.map((channel) => (
+            <div className="flex flex-wrap items-center gap-4">
+              {contactChannels.map((channel, index) => (
                 <a
+                  key={index}
                   href={channel.link}
                   className="rounded-full px-4 py-1 border border-white/50 text-white/90 tracking-tighter text-sm"
                 >
@@ -40,13 +41,13 @@ export function Footer() {
           </div>{' '}
         </div>
         <div className="flex items-center w-full px-4 py-4 justify-between border-t border-t-white">
-          <a className="text-white/90 text-sm tracking-tighter">
+          <a className="text-white/90 cursor-pointer hover:text-white transition-all text-sm tracking-tighter">
             Terms & Conditions
           </a>
-          <a className="text-white/90 text-sm tracking-tighter">
+          <a className="text-white/90 cursor-pointer hover:text-white transition-all text-sm tracking-tighter">
             Copyright 2025. All Right Reserved
           </a>
-          <a className="text-white/90 text-sm tracking-tighter">
+          <a className="text-white/90 cursor-pointer hover:text-white transition-all text-sm tracking-tighter">
             Cookies Policy
           </a>
         </div>

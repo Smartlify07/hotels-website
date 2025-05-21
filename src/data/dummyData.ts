@@ -5,7 +5,7 @@ export const hotels = [
     originalPrice: 450,
     currentPrice: 300,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747602214/photorealistic-wooden-house-interior-with-timber-decor-furnishings_c1uzi2.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/3d-rendering-wooden-house_gs3jri.jpg',
   },
   {
     name: 'The Royal Crest',
@@ -13,7 +13,7 @@ export const hotels = [
     originalPrice: 350,
     currentPrice: 250,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603202/3d-rendering-wooden-house_lpcsem.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/indoor-design-luxury-resort_wjdim1.jpg',
   },
   {
     name: 'Sunset Vista Retreat',
@@ -21,7 +21,7 @@ export const hotels = [
     originalPrice: 400,
     currentPrice: 275,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603202/photorealistic-wooden-house-with-timber-structure_sdivve.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/3d-rendering-wooden-house_1_ukbyz7.jpg',
   },
   {
     name: 'Arctic Bloom Lodge',
@@ -29,7 +29,7 @@ export const hotels = [
     originalPrice: 500,
     currentPrice: 380,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603198/3d-rendering-wooden-house_1_yqqlg2.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688115/photorealistic-wooden-house-with-timber-structure_nkslyu.jpg',
   },
   {
     name: 'Golden Dunes Resort',
@@ -37,7 +37,7 @@ export const hotels = [
     originalPrice: 420,
     currentPrice: 310,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603201/rural-house-with-stone-pathway_nlgv51.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688115/photorealistic-wooden-house-interior-with-timber-decor-furnishings_h9i1ej.jpg',
   },
   {
     name: 'Mountain Serenity Inn',
@@ -45,7 +45,7 @@ export const hotels = [
     originalPrice: 390,
     currentPrice: 290,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603198/3d-rendering-wooden-house_1_yqqlg2.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688115/photorealistic-wooden-house-with-timber-structure_nkslyu.jpg',
   },
   {
     name: 'Seacliff Luxury Suites',
@@ -53,7 +53,7 @@ export const hotels = [
     originalPrice: 370,
     currentPrice: 240,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747602217/luxury-holiday-home_mgwrl4.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747616660/photorealistic-wooden-house-interior-with-timber-decor-furnishings_utravu.jpg',
   },
   {
     name: 'The Zen Garden Hotel',
@@ -61,22 +61,6 @@ export const hotels = [
     originalPrice: 330,
     currentPrice: 230,
     image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603201/rural-house-with-stone-pathway_nlgv51.jpg',
-  },
-  {
-    name: 'Azure Bay Resort',
-    location: 'Santorini, Greece',
-    originalPrice: 410,
-    currentPrice: 280,
-    image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747602217/luxury-holiday-home_mgwrl4.jpg',
-  },
-  {
-    name: 'Nordic Light Stay',
-    location: 'Oslo, Norway',
-    originalPrice: 360,
-    currentPrice: 250,
-    image:
-      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747603202/photorealistic-wooden-house-with-timber-structure_sdivve.jpg',
+      'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/indoor-design-luxury-resort_wjdim1.jpg',
   },
 ];

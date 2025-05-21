@@ -1,22 +1,29 @@
 import { hotels } from '@/data/dummyData';
 import { Globe } from 'lucide-react';
 
+const calculatePrice = (hotel: any) => {
+  const percentage = Math.floor(
+    ((hotel.originalPrice - hotel.currentPrice) / hotel.currentPrice) * 100
+  );
+  return percentage;
+};
+
 export function HotelsListSection() {
   return (
-    <section className="flex items-center px-4 py-20 flex-col">
+    <section className="flex items-center px-4 md:py-20 flex-col">
       <div className=" flex flex-col gap-16">
-        <div className="flex items-center gap-5 justify-between">
+        <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
           <header className="flex flex-col flex-1/2 gap-4">
             <span className="rounded-full self-start border-neutral-300 border text-neutral-950 tracking-tighter px-3 py-1">
               Special Offer
             </span>
 
-            <h1 className="text-5xl tracking-tighter text-neutral-950">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl tracking-tighter text-neutral-950">
               Limited-Time Offers You Can't Miss!
             </h1>
           </header>
 
-          <div className="flex flex-col flex-1/5 gap-5">
+          <div className="flex flex-col md:flex-1/3 lg:flex-1/5 gap-5">
             <p className="text-neutral-600 tracking-tighter text-sm">
               Enjoy unbeatable rates, complimentary perks and extra insights on
               us. Your perfect getaway just got even better!
@@ -28,15 +35,10 @@ export function HotelsListSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
-          {hotels.slice(0, 8).map((hotel) => {
-            const percentage = Math.floor(
-              ((hotel.originalPrice - hotel.currentPrice) /
-                hotel.currentPrice) *
-                100
-            );
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {hotels.slice(0, 8).map((hotel, index) => {
             return (
-              <div className="flex flex-col gap-2">
+              <div key={index} className="flex flex-col gap-2">
                 <div className="relative">
                   <div className="absolute rounded-xl top-0 left-0 bg-black/20 w-full h-full"></div>
                   <img
@@ -44,7 +46,7 @@ export function HotelsListSection() {
                     src={hotel?.image}
                   />
                   <span className="rounded-full absolute top-4 right-4 bg-black/70 text-white text-xs  tracking-tighter py-1 px-3">
-                    {percentage}% discount
+                    {calculatePrice(hotel)}% discount
                   </span>
                 </div>
 
