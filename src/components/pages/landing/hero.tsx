@@ -3,7 +3,7 @@ import { SearchIcon } from 'lucide-react';
 export function HeroSection() {
   const pills = ['Wellness', 'Others', 'Dining'];
   return (
-    <section className="min-h-[450px] md:min-h-[500px] px-4 z-[100] flex flex-col justify-between">
+    <section className="min-h-[450px] md:min-h-[500px] md:pb-0 px-4 z-[100] flex flex-col justify-between">
       <div className="flex flex-col gap-4 md:gap-0 md:flex-row  md:items-center py-6 justify-between w-full">
         <h1 className="text-base w-[200px] text-white tracking-tighter">
           Let's make your stay unforgettable!
