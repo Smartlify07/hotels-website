@@ -1,5 +1,6 @@
 import { hotels } from '@/data/dummyData';
 import { Globe } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const calculatePrice = (hotel: any) => {
   const percentage = Math.floor(
@@ -10,7 +11,20 @@ const calculatePrice = (hotel: any) => {
 
 export function HotelsListSection() {
   return (
-    <section className="flex items-center px-4 md:py-20 flex-col">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="flex items-center px-4 md:py-20 flex-col"
+    >
       <div className=" flex flex-col gap-16">
         <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
           <header className="flex flex-col flex-1/2 gap-4">
@@ -38,7 +52,21 @@ export function HotelsListSection() {
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
           {hotels.slice(0, 8).map((hotel, index) => {
             return (
-              <div key={index} className="flex flex-col gap-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: index * 0.2,
+                  delay: index * 0.2,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                key={index}
+                className="flex flex-col gap-2"
+              >
                 <div className="relative">
                   <div className="absolute rounded-xl top-0 left-0 bg-black/20 w-full h-full"></div>
                   <img
@@ -58,11 +86,11 @@ export function HotelsListSection() {
                     <Globe size={12} /> <span>{hotel.location}</span>
                   </h5>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

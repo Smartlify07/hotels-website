@@ -1,9 +1,23 @@
 import { hotels } from '@/data/dummyData';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function HotelViewSection() {
   return (
-    <section className="flex flex-col md:flex-row items-stretch gap-10 md:py-10 px-4">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="flex flex-col md:flex-row items-stretch gap-10 md:py-10 px-4"
+    >
       <div className="flex-1/2">
         <div className="relative h-[450px]">
           <img
@@ -94,6 +108,6 @@ export function HotelViewSection() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 export function AboutSection() {
   const images = [
     'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688116/3d-rendering-wooden-house_gs3jri.jpg',
@@ -8,7 +10,20 @@ export function AboutSection() {
     'https://res.cloudinary.com/dgpbznsc3/image/upload/v1747688115/photorealistic-wooden-house-with-timber-structure_nkslyu.jpg',
   ];
   return (
-    <section className="flex flex-col py-20 px-4 md:px-0 items-center gap-4">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="flex flex-col py-20 px-4 md:px-0 items-center gap-4"
+    >
       <div className="flex-col flex items-center gap-6">
         <span className="border rounded-full py-1 tracking-tighter px-3 border-neutral-300 text-neutral-900">
           About us
@@ -28,15 +43,30 @@ export function AboutSection() {
 
         <div className="grid grid-cols-2 md:px-4 lg:w-6/12 mt-10 md:grid-cols-3 gap-6">
           {images.map((image, index) => (
-            <div key={index} className="col-span-1">
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: (index + 0.5) * 0.5,
+                delay: index * 0.2,
+              }}
+              viewport={{
+                once: true,
+              }}
+              key={index}
+              className="col-span-1"
+            >
               <img
                 src={image}
                 className={`${index === 4 && 'h-[270px]'} ${index === 1 && 'h-[270px]'} h-[250px] rounded-2xl object-cover w-full`}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
